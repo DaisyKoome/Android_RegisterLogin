@@ -8,20 +8,20 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
-public class password_db extends SQLiteOpenHelper {
+public class PasswordDB extends SQLiteOpenHelper {
 
     public static final String DATABASE_NAME = "password";
     public static final String TABlE_NAME = "user";
     public static final String COL_2 = "EMAIL";
     public static final String COL_3 = "PASSWORD";
 
-    public password_db(@Nullable Context context) {
+    public PasswordDB(@Nullable Context context) {
         super(context, DATABASE_NAME, null, 1);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table " + TABlE_NAME + "(ID INTEGER PRIMARY KEY AUTOINCREMENT, EMAIL TEXT, PASSWORD TEXT)");
+        db.execSQL("create table " + TABlE_NAME + "(ID INTEGER PRIMARY KEY AUTOINCREMENT, EMAIL TEXT UNIQUE, PASSWORD TEXT)");
     }
 
     @Override
@@ -31,7 +31,7 @@ public class password_db extends SQLiteOpenHelper {
     }
 
     //Registration handler
-    public boolean insertData (String email, String password){
+    public boolean insertData(String email, String password) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(COL_2, email);
@@ -44,11 +44,10 @@ public class password_db extends SQLiteOpenHelper {
     }
 
     //Login handler
-
-    public Cursor login_user (String email, String password){
-        SQLiteDatabase db = this.getWritableDatabase();
-        Cursor res = db.rawQuery(" SELECT * FROM "+ TABlE_NAME + " WHERE EMAIL " + email + " AND PASSWORD "+password , null);
-        return  res;
+    public Cursor login_user(String email) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor res = db.rawQuery("SELECT * FROM " + TABlE_NAME + " WHERE EMAIL='" + email + "';", null);
+        return res;
     }
 
 }

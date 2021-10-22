@@ -1,30 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/color_secondary"
     android:layout_gravity="center"
+    android:background="@color/color_secondary"
+    android:orientation="vertical"
     tools:context=".RegisterActivity">
-    
+
     <View
+        android:layout_width="11dp"
+        android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
-        android:background="@color/color_primary"
-        android:layout_width="11dp"
-        android:layout_height="match_parent"
-        />
+        android:background="@color/color_primary" />
 
     <ScrollView
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_centerInParent="true"
-        android:paddingTop="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:paddingTop="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -50,73 +48,69 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
-                android:background="@color/white"
                 android:layout_marginEnd="10dp"
-                android:layout_marginStart="10dp">
+                android:background="@color/white">
 
                 <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:id="@+id/email"
-                    android:textColor="@color/color_primary"
-                    android:textColorHint="@color/color_primary"
-                    android:inputType="textEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:hint="Input Email"
-                    />
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/color_primary"
+                    android:textColorHint="@color/color_primary" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
-                android:background="@color/white"
                 android:layout_marginEnd="10dp"
-                android:layout_marginStart="10dp">
+                android:background="@color/white">
 
                 <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:id="@+id/password"
-                    android:textColor="@color/color_primary"
-                    android:textColorHint="@color/color_primary"
-                    android:inputType="textPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:hint="Input Password"
-                    />
+                    android:inputType="textPassword"
+                    android:textColor="@color/color_primary"
+                    android:textColorHint="@color/color_primary" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
-                android:background="@color/white"
                 android:layout_marginEnd="10dp"
-                android:layout_marginStart="10dp">
+                android:background="@color/white">
 
                 <EditText
+                    android:id="@+id/password_con"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/password_con"
-                    android:textColor="@color/color_primary"
-                    android:textColorHint="@color/color_primary"
-                    android:inputType="textPassword"
                     android:hint="Input Password Confirm"
-                    />
+                    android:inputType="textPassword"
+                    android:textColor="@color/color_primary"
+                    android:textColorHint="@color/color_primary" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
+                android:id="@+id/register"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/register"
-                android:padding="15dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="15dp"
-                android:textColor="@color/color_secondary"
+                android:padding="15dp"
                 android:text="Register"
-                />
+                android:textColor="@color/color_secondary" />
 
         </LinearLayout>
 
@@ -131,6 +125,5 @@
         android:layout_marginStart="-15dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
-        android:src="@drawable/back_image"
-        />
+        android:src="@drawable/back_image" />
 </RelativeLayout>
