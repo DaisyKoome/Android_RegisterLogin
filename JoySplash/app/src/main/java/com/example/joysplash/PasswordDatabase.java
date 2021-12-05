@@ -8,14 +8,14 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
-public class PasswordDB extends SQLiteOpenHelper {
+public class PasswordDatabase extends SQLiteOpenHelper {
 
     public static final String DATABASE_NAME = "password";
     public static final String TABlE_NAME = "user";
     public static final String COL_2 = "EMAIL";
     public static final String COL_3 = "PASSWORD";
 
-    public PasswordDB(@Nullable Context context) {
+    public PasswordDatabase(@Nullable Context context) {
         super(context, DATABASE_NAME, null, 1);
     }
 

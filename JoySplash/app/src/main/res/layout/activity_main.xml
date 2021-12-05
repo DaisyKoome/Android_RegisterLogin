@@ -13,6 +13,6 @@
        android:layout_width="300dp"
        android:layout_height="wrap_content"
        android:layout_gravity="center"
-       android:src="@drawable/ic_pretty_lady" />
+       android:src="@drawable/kklogo" />
 
 </LinearLayout>

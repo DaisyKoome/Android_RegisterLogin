@@ -1,12 +1,12 @@
 package com.example.joysplash;
 
-import static com.example.joysplash.PasswordDB.COL_3;
+import static com.example.joysplash.PasswordDatabase.COL_3;
 
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -22,19 +22,21 @@ public class LoginActivity extends AppCompatActivity {
     Button loginButton;
     EditText emailET;
     EditText passwordET;
-    PasswordDB passwordDB;
+    PasswordDatabase passwordDB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        passwordDB = new PasswordDB(this);
+        passwordDB = new PasswordDatabase(this);
 
         goto_reg = findViewById(R.id.goto_reg);
         loginButton = findViewById(R.id.login);
         emailET = findViewById(R.id.email);
         passwordET = findViewById(R.id.password);
+
+        loginButton.setBackgroundColor(Color.YELLOW);
 
         goto_reg.setOnClickListener(v -> {
             Log.d(TAG, "Clicked Go To Register");

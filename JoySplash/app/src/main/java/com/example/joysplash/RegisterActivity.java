@@ -17,14 +17,14 @@ public class RegisterActivity extends AppCompatActivity {
     ImageView back_to_login;
     EditText editTextEmail, editTextPassword, editTextConPassword;
     Button register_user;
-    PasswordDB myDatabase;
+    PasswordDatabase myDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        myDatabase = new PasswordDB(this);
+        myDatabase = new PasswordDatabase(this);
 
         editTextEmail = findViewById(R.id.email);
         editTextPassword = findViewById(R.id.password);

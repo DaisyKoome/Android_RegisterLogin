@@ -7,14 +7,6 @@
     android:background="@color/color_secondary"
     tools:context=".LoginActivity">
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:background="@color/color_primary" />
-
     <ScrollView
         android:id="@+id/fullscreen_content"
         android:layout_width="match_parent"
@@ -32,20 +24,20 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="160dp">
 
                 <ImageView
-                    android:layout_width="136dp"
-                    android:layout_height="126dp"
+                    android:layout_width="130dp"
+                    android:layout_height="110dp"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentBottom="true"
-                    android:layout_marginStart="140dp"
-                    android:layout_marginTop="3dp"
-                    android:layout_marginEnd="-133dp"
-                    android:layout_marginBottom="-3dp"
-                    android:src="@drawable/image_logo" />
+                    android:layout_marginStart="70dp"
+                    android:layout_marginTop="-10dp"
+                    android:layout_marginEnd="-115dp"
+                    android:layout_marginBottom="5dp"
+                    android:src="@drawable/kklogo" />
 
             </RelativeLayout>
 
@@ -59,12 +51,12 @@
 
                 <EditText
                     android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/email"
                     android:inputType="textEmailAddress"
                     android:textColor="@color/color_primary"
-                    android:textColorHint="@color/color_primary"
-                    android:hint="@string/email"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:textColorHint="@color/color_primary" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -78,34 +70,34 @@
 
                 <EditText
                     android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/password"
                     android:inputType="textPassword"
                     android:textColor="@color/color_primary"
-                    android:textColorHint="@color/color_primary"
-                    android:hint="@string/password"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:textColorHint="@color/color_primary" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
-                <Button
-                    android:id="@+id/login"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginTop="10dp"
-                    android:textColor="@color/color_primary"
-                    android:text="@string/login"
-                    android:padding="1dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
+            <Button
+                android:id="@+id/login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:padding="1dp"
+                android:text="@string/login"
+                android:background="@color/yellow"
+                android:textColor="@color/white" />
         </LinearLayout>
 
     </ScrollView>
 
     <ImageView
         android:id="@+id/goto_reg"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="10dp"

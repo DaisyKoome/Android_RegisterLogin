@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">JoySplash</string>
+    <string name="app_name">Klassyque Kreations</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="login">login</string>
+    <string name="register">Register</string>
 </resources>
